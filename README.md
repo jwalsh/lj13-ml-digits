@@ -68,3 +68,4 @@ https://docs.google.com/presentation/d/17amRTjLFi_2KhUn8qU9nWnwVScpoF2kgJBOEBHxS
 
 On GitHub:
 https://github.com/strangeloop/lambdajam2013/tree/master/jams/learning
+https://github.com/strangeloop/lambdajam2013
