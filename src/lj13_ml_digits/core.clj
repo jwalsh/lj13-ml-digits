@@ -11,8 +11,9 @@
           (doall
            (csv/read-csv in-file)))))
 
-(def examples (get-data))
+(def examples (read-line get-data))
 
+;; Coercion
 (defn line
   "Use a single line for testing"
   [digit]
@@ -24,16 +25,23 @@
 (defn distance
   "Show the distance for a digit sequences"
   [x y]
-  (square
-   (- (first x)
-      (first y))))
+  (let [sub-v (map - x y)]
+    (apply + (map square sub-v))))
 
 ;; Tests for the REPL
-(quot
  (distance
   (line (first examples))
   (line (second examples)))
- )
+
+
+;; Alternative distance calculations 
+(def distance-metric-cubic)
+(def distance-metric-windowing)
+
+
+(defn closest-neighbor-classifier
+  []
+  ())
 
 (defn classify-digit
   "Classify the digit"
